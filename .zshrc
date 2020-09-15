@@ -3,8 +3,6 @@ HISTSIZE=9999999
 SAVEHIST=9999999
 bindkey -e
 
-autoload -Uz compinit
-compinit
 # End of lines added by compinstall
 
 ZGEN_RESET_ON_CHANGE=("${HOME}/.zshrc")

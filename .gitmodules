@@ -1,0 +1,3 @@
+[submodule "bin/zgen"]
+	path = bin/zgen
+	url = git@github.com:tarjoilija/zgen.git

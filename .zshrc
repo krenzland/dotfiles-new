@@ -31,6 +31,11 @@ function ownip() {
     command curl --silent 'https://httpbin.org/ip' | command grep -o -e '[0-9\.]*' 
 }
 
+function doi2bibtex() {
+    # Echo used to print out new line after response
+    command curl --silent -LH "Accept: application/x-bibtex" "https://data.crossref.org/$1"; command echo
+}
+
 function agr() {
     (cd $(git root) && ag $1)
 }

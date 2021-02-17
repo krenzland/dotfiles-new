@@ -16,6 +16,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/colorize
     zgen oh-my-zsh plugins/common-aliases
     zgen oh-my-zsh themes/blinks
+    zgen load agkozak/zsh-z
     zgen save
 
 fi

@@ -67,7 +67,10 @@ function __xps_settings() {
 }
 
 function __thinkpad_settings() {
-
+    # Spack
+    export SPACK_ROOT="${HOME}/src/spack/"
+    export PATH="${SPACK_ROOT}/bin:${PATH}"
+    source "${SPACK_ROOT}/share/spack/setup-env.sh"
 }
 
 case "$(hostname)" in

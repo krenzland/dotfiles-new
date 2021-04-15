@@ -47,6 +47,7 @@ export C_INCLUDE_PATH=$HOME/include:$C_INCLUDE_PATH
 export CPLUS_INCLUDE_PATH=$HOME/include:$CPLUS_INCLUDE_PATH
 export LD_LIBRARY_PATH="${HOME}/lib:${LD_LIBRARY_PATH}"
 export PKG_CONFIG_PATH="${HOME}/lib/pkgconfig/:${PKG_CONFIG_PATH}"
+export JULIA_NUM_THREADS=$(nproc)
 
 # PC specific settings
 function __sccs_settings() {

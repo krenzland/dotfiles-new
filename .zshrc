@@ -28,6 +28,8 @@ export EDITOR="vi"
 # https://www.atlassian.com/git/tutorials/dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+alias mountmls="sshfs -o umask=$(umask),gid=$(id -g),uid=$(id -u),default_permissions workstation:/home/mls ~/mls"
+
 function ownip() {
     command curl --silent 'https://httpbin.org/ip' | command grep -o -e '[0-9\.]*' 
 }
@@ -73,6 +75,8 @@ function __thinkpad_settings() {
     export SPACK_ROOT="${HOME}/src/spack/"
     export PATH="${SPACK_ROOT}/bin:${PATH}"
     source "${SPACK_ROOT}/share/spack/setup-env.sh"
+    export NETCDF_DIR=/usr/lib64/openmpi
+    export NETCDF_INCLUDE_DIR=/usr/include/openmpi-x86_64
 }
 
 case "$(hostname)" in
